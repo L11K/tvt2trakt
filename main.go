@@ -27,7 +27,6 @@ type Config struct {
 }
 
 type TvTimeShow struct {
-	CreatedAt           string `csv:"created_at"`
 	TvShowName          string `csv:"tv_show_name"`
 	EpisodeSeasonNumber string `csv:"episode_season_number"`
 	EpisodeNumber       string `csv:"episode_number"`
@@ -36,7 +35,6 @@ type TvTimeShow struct {
 }
 
 type Episode struct {
-	CreatedAt string
 	Number    int
 	ID        string
 	UpdatedAt string
@@ -283,7 +281,6 @@ func loadFile() {
 			}
 
 			episode := Episode{
-				CreatedAt: tvt_show.CreatedAt,
 				Number:    episode_num,
 				ID:        tvt_show.EpisodeID,
 				UpdatedAt: tvt_show.UpdatedAt,
@@ -314,7 +311,6 @@ func loadFile() {
 			}
 
 			episode := Episode{
-				CreatedAt: tvt_show.CreatedAt,
 				Number:    episode_num,
 				ID:        tvt_show.EpisodeID,
 				UpdatedAt: tvt_show.UpdatedAt,
